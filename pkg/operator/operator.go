@@ -74,12 +74,12 @@ func New(cliCfg *rest.Config, opCfg *operatorconfig.Config) (*Operator, error) {
 		return nil, fmt.Errorf("failed to create manager: %w", err)
 	}
 
-	if err = (&externaldnscontroller.ExternalDNSReconciler{
-		Client:            mgr.GetClient(),
-		Scheme:            mgr.GetScheme(),
-		OperatorNamespace: opCfg.OperatorNamespace,
-		OperandNamespace:  opCfg.OperandNamespace,
-	}).SetupWithManager(mgr); err != nil {
+	// Create and register the contour controller with the operator manager.
+
+	if _, err := externaldnscontroller.New(mgr, externaldnscontroller.Config{
+		Namespace: opCfg.OperandNamespace,
+		Image:     opCfg.ExternalDNSImage,
+	}); err != nil {
 		return nil, fmt.Errorf("failed to create externaldns controller: %w", err)
 	}
 
