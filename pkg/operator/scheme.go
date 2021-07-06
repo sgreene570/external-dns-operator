@@ -20,7 +20,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 
-	operatorv1alpha1 "github.com/openshift/external-dns-operator/api/v1alpha1"
+	operatorv1alpha1 "github.com/openshift/api/operator/v1alpha1"
 )
 
 var (
