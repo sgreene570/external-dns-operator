@@ -79,6 +79,10 @@ github.com/matttproud/golang_protobuf_extensions/pbutil
 github.com/modern-go/concurrent
 # github.com/modern-go/reflect2 v1.0.1
 github.com/modern-go/reflect2
+# github.com/openshift/api v0.0.0-20210706092853-b63d499a70ce => github.com/sgreene570/api v0.0.0-20210706131206-5e29fe3f6700
+## explicit
+github.com/openshift/api/config/v1
+github.com/openshift/api/operator/v1alpha1
 # github.com/pkg/errors v0.9.1
 github.com/pkg/errors
 # github.com/prometheus/client_golang v1.11.0
@@ -509,3 +513,4 @@ sigs.k8s.io/structured-merge-diff/v4/typed
 sigs.k8s.io/structured-merge-diff/v4/value
 # sigs.k8s.io/yaml v1.2.0
 sigs.k8s.io/yaml
+# github.com/openshift/api => github.com/sgreene570/api v0.0.0-20210706131206-5e29fe3f6700

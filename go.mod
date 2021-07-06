@@ -4,8 +4,11 @@ go 1.16
 
 require (
 	github.com/go-logr/logr v0.4.0
+	github.com/openshift/api v0.0.0-20210706092853-b63d499a70ce
 	k8s.io/apimachinery v0.21.1
 	k8s.io/client-go v0.21.1
 	sigs.k8s.io/controller-runtime v0.9.0
 	sigs.k8s.io/controller-tools v0.6.0
 )
+
+replace github.com/openshift/api => github.com/sgreene570/api v0.0.0-20210706131206-5e29fe3f6700
